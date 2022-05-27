@@ -1,4 +1,4 @@
-# A Multi-Stream Refinement Network for Human Object Interaction Detection
+# Multi-Stream Refinement Network for Human Object Interaction Detection
 
 Human Object Interaction (HOI) detection has always been a crucial problem in comprehensive visual understanding such as activity understanding and human intention prediction. The HOI aims to detect <human, action, object> triplets within an image, where not only all object and human instances are detected, but also the possible interactions between human and objects have to be analyzed. Many existing methods often exploit to integrate the human and object visual features , the spatial layout of human-object pairs, human poses, contextual information, and even object semantic labels into a framework to learn the interactions, proving that all these components can contribute to improve the HOI detection. However, most methods simply concatenate these components that are not explicitly embedded in the feature learning for  HOI detection. In this work, we are trying to model these components explicitly using one uniform multi-stream feature neural network that can effectively learn the visual features of humans, contexts, and objects, while the network receives the attentions from human poses, spatial configurations, and semantic prior knowledge of objects to refine the three types of visual features, respectively. In addition, a graph neural network is employed here to learn the structural features of human-object pairs. We verified our method on V-COCO and HICO-DET datasets with extensive experiments, and compare our method with other state-of-the-art methods. The experimental results demonstrate that our method is effective yet simple, achieving superior performance to those state-of-the-art methods.
 
@@ -40,6 +40,8 @@ Human Object Interaction (HOI) detection has always been a crucial problem in co
 
 
 
+|                  |                  |  Default                     |
+|                  |                  | :---------------------------:|
 |      Method      | Backbone         | mAP(Full) | mAP(Rare)| mAP(None-Rare)|
 | :--------------: | ---------------- | --------- | -------- |-------- |
 |    HO-RCNN[8]    | CaffeNet         | 7.81      | 5.37     | 8.54  |
@@ -161,7 +163,15 @@ To see the results in original HICO_DET scheme:
  ***
  ## Citation
  If you find this code useful, please cite our work with the following bibtex:
- ```
-
+ ```@article{SHAO2022103529,
+title = {Multi-stream feature refinement network for human object interaction detection},
+journal = {Journal of Visual Communication and Image Representation},
+volume = {86},
+pages = {103529},
+year = {2022},
+issn = {1047-3203},
+doi = {https://doi.org/10.1016/j.jvcir.2022.103529},
+url = {https://www.sciencedirect.com/science/article/pii/S1047320322000712},
+author = {Zhanpeng Shao and Zhongyan Hu and Jianyu Yang and Youfu Li},
  ```
 
