@@ -19,7 +19,7 @@ Human Object Interaction (HOI) detection has always been a crucial problem in co
 
 **Note**: Ablation study of our method on V-COCO dataset.
 
-##  Comparisons on V-COCO test dataset
+##  Result comparisons on V-COCO test dataset 
 
 
 
@@ -31,17 +31,16 @@ Human Object Interaction (HOI) detection has always been a crucial problem in co
 |     iCAN[10]     | ResNet-50        | 45.3      | 52.4     |
 |     RPNN[30]     | ResNet-50        | 47.5      | -        |
 |   Li et al.[42]  | ResNet-50        | 48.7      | -        |
-|    VSGNet[12]    | ResNet-152       | 51.76     | 57.03    |
+|    VSGNet[12]    | ResNet-152       | 51.8      | 57.0     |
 |    PMFNet[14]    | ResNet-50-FPN    | 52.0      | -        |
 |    PFNet[32]     | ResNet-50        | 52.8      | -        |
-|     **Ours**     | **ResNet-152**   | **52.13** |**57.03** |
-
-##  Comparisons on HICO-DET test dataset
-
+|    Ours          | ResNet-50        | 50.5      | 55.4     |
+|     **Ours**     | **ResNet-152**   | **52.1**  |**57.0** |
 
 
-|                  |                  |  Default                     |
-|                  |                  | :---------------------------:|
+##  Result comparisons on HICO-DET test dataset in Default setting
+
+
 |      Method      | Backbone         | mAP(Full) | mAP(Rare)| mAP(None-Rare)|
 | :--------------: | ---------------- | --------- | -------- |-------- |
 |    HO-RCNN[8]    | CaffeNet         | 7.81      | 5.37     | 8.54  |
@@ -53,7 +52,26 @@ Human Object Interaction (HOI) detection has always been a crucial problem in co
 |    PMFNet[14]    | ResNet-50-FPN    | 17.46     | 15.65    | 18.00 |
 |    VSGNet[12]    | ResNet-152       | 19.80     | 16.05    | 20.91 |
 |    PFNet[32]     | ResNet-50        | 20.05     | 16.66    | 21.07 |
-|     **Ours**     | **ResNet-152**   | **20.99** |**18.12** | 21.85 |
+|     Ours         | ResNet-50        | 20.12     | 17.09    | 21.03 |
+|     **Ours**     | **ResNet-152**   | **20.99** |**18.12** | **21.85** |
+
+##  Result comparisons on HICO-DET test dataset in Known Object setting
+
+
+|      Method      | Backbone         | mAP(Full)  | mAP(Rare)| mAP(None-Rare)|
+| :--------------: | ---------------- | ---------  | -------- |-------- |
+|    HO-RCNN[8]    | CaffeNet         | 10.41      | 8.94     | 10.85  |
+|  InteractNet[9]  | ResNet-50-FPN    | -          | -        | -      |
+|     GPNN[37]     | ResNet-50        | -          | -        | -      |
+|     iCAN[10]     | ResNet-50        | 16.26      | 11.33    | 17.73  |
+|   Li et al.[42]  | ResNet-50        | 19.38      | 15.38    | 20.57  |
+|     RPNN[30]     | ResNet-50        | -          | -        | -      |
+|    PMFNet[14]    | ResNet-50-FPN    | 20.34      | 17.47    | 21.20  |
+|    VSGNet[12]    | ResNet-152       | -          | -        | -      |
+|    PFNet[32]     | ResNet-50        | 24.01      | 21.09    | 24.89  |
+|     Ours         | ResNet-50        | 23.10      | 20.48    | 24.01  |
+|     **Ours**     | **ResNet-152**   | **23.96** |**21.37**  | **24.73** |
+
 
 ## Quick start
 ### Installation
@@ -163,7 +181,8 @@ To see the results in original HICO_DET scheme:
  ***
  ## Citation
  If you find this code useful, please cite our work with the following bibtex:
- ```@article{SHAO2022103529,
+ ```
+ @article{SHAO2022103529,
 title = {Multi-stream feature refinement network for human object interaction detection},
 journal = {Journal of Visual Communication and Image Representation},
 volume = {86},
